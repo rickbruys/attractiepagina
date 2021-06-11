@@ -35,14 +35,16 @@ require_once 'admin/backend/config.php';
         ?>
 
             <div class="attracties">
-            <?php foreach ($rides as $ride) ?>
-                <div class="attractie">
-                    <h2><?php echo $ride['title']?></h2>
-                    <p><?php echo $ride['description']?></p>
-                    <p><i><?php echo $ride['themeland']?></i></p>
-                    <img src="<?php echo 'img/attracties/' . $ride['img_file']?>" alt="plaat">
-                </div>
+                <?php foreach ($rides as $ride): ?>
+                    <div class="attractie <?php if($ride['fast_pass']) echo "large"?>">
+                        <img src="<?php echo 'img/attracties/' . $ride['img_file']?>" alt="plaat">
+                        <p><i><?php echo $ride['themeland']?></i></p>
+                        <h2><?php echo $ride['title']?></h2>
+                        <p><?php echo $ride['description']?></p>
+                    </div>
+                <?php endforeach; ?>
             </div>
+            
 
 
         </main>

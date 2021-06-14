@@ -38,10 +38,19 @@ require_once 'admin/backend/config.php';
                 <?php foreach ($rides as $ride): ?>
                     <div class="attractie <?php if($ride['fast_pass']) echo "large"?>">
                         <img src="<?php echo 'img/attracties/' . $ride['img_file']?>" alt="plaat">
-                        <p><i><?php echo $ride['themeland']?></i></p>
-                        <h2><?php echo $ride['title']?></h2>
-                        <p><?php echo $ride['description']?></p>
+                        <div class="ride-bottom">
+                            <p><i><?php echo "<div class='themeland'>" . $ride['themeland'] . "</div>"?></i></p>
+                            <h2><?php echo $ride['title']?></h2>
+                            <p><?php echo $ride['description']?></p>
+                        </div>
+                        <?php if($ride['fast_pass']): ?>
+                            <div class="fast-pass">	
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, minima soluta magnam, necessitatibus ullam consequuntur sunt consectetur animi ea dolore repellendus eaque voluptates? Aspernatur sunt rerum aut illo nihil voluptas.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus maxime ipsum quasi ducimus quod rerum sapiente eius! Rem quod exercitationem consequatur ut sit sequi aspernatur, corrupti laborum ducimus soluta accusantium.</p>
+                                <button><img src="img/ticket.png" alt="ticket">FAST PASS</button> 
+                            </div>
                     </div>
+                            <?php endif; ?>
                 <?php endforeach; ?>
             </div>
             

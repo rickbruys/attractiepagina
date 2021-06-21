@@ -49,8 +49,9 @@ require_once 'admin/backend/config.php';
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus maxime ipsum quasi ducimus quod rerum sapiente eius! Rem quod exercitationem consequatur ut sit sequi aspernatur, corrupti laborum ducimus soluta accusantium.</p>
                                 <button><img src="img/ticket.png" alt="ticket">FAST PASS</button> 
                             </div>
-                    </div>
                             <?php endif; ?>
+                    </div>
+                            
                 <?php endforeach; ?>
             </div>
             
